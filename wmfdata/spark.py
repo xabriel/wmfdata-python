@@ -15,13 +15,7 @@ from wmfdata.utils import (
 """
 Will be used for findspark.init().
 """
-SPARK_HOME = os.environ.get("SPARK_HOME", "/usr/lib/spark3")
-if SPARK_HOME == "/usr/lib/spark2":
-    warnings.warn(
-        "Spark2 has been deprecated. Please upgrade your jobs to Spark3. "
-        "See https://phabricator.wikimedia.org/T318367 for details.",
-        category=FutureWarning
-    )
+SPARK_HOME = os.environ.get("SPARK_HOME", "/usr/lib/spark2")
 
 """
 Predefined spark sessions and configs for use with the get_session and run functions.
